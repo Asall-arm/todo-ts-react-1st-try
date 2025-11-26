@@ -1,5 +1,5 @@
 import React from "react";
-import type { Todo } from "../types/todo";
+import type { Todo } from "../models";
 
 interface TodoItemProps {
   todo: Todo;
@@ -20,13 +20,13 @@ const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
           className="w-5 h-5"
           readOnly
         />
-        <span
+        <p
           className={`text-lg ${
             todo.completed ? "line-through text-gray-500" : "text-gray-800"
           }`}
         >
           {todo.title}
-        </span>
+        </p>
       </div>
 
       <button
